@@ -18,6 +18,7 @@
 
     .main-content {
         flex: auto;
+        display: flex;
         margin: 1rem auto;
         padding: 1rem;
         border-radius: 1rem;
@@ -25,6 +26,13 @@
         width: 100%;
         background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
         backdrop-filter: blur(4px);
+    }
+    .main-content img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        margin: 0 auto;
+        padding: 1rem;
     }
     .main-content h2 {
         text-align: center;
