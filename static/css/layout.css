@@ -1,12 +1,15 @@
 @layer layout;
 @layer layout {
+
     .header {
+        position: relative;
         text-align: center;
         margin: auto;
         padding: 1rem;
     }
 
     .main {
+        position: relative;
         display: flex;
         flex-direction: column;
         margin: auto;
@@ -18,9 +21,10 @@
         margin: 1rem auto;
         padding: 1rem;
         border-radius: 1rem;
-        border: 1px solid var(--color-mid-grey);
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-sm);
         width: 100%;
+        background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
+        backdrop-filter: blur(4px);
     }
     .main-content h2 {
         text-align: center;
@@ -31,8 +35,9 @@
 
 
     .footer {
+        position: relative;
         text-align: center;
-        background: color-mix(in srgb, var(--color-canvas), var(--color-mid-grey) 10%);
+        background: color-mix(in oklab, var(--color-canvas), var(--color-mid-grey) 10%);
         margin: auto;
         padding: 1rem;
     }
