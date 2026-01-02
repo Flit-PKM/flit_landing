@@ -1,0 +1,25 @@
+
+:root {
+    --color-green: oklch(50% 0.25 142);
+    --color-red: oklch(50% 0.25 31);
+    --color-blue: oklch(50% 0.25 255);
+	--color-mid-grey: oklch(50% 0 0);
+
+	--color-canvas: oklch(98% 0 0);     /* Neutral background */
+	--color-ink: oklch(15% 0 0);        /* Primary text */
+	--color-link: color-mix(in rgb, var(--color-blue) 50%, var(--color-ink) 50%);
+	--color-negative: color-mix(in rgb, var(--color-red) 50%, var(--color-ink) 50%);
+	--color-positive: color-mix(in rgb, var(--color-green) 50%, var(--color-ink) 50%);
+
+	--shadow-color: color-mix(in rgb, var(--color-ink) 15%, transparent);
+	--shadow-sm: 0 1px 3px var(--shadow-color);
+	--shadow-md: 0 4px 12px var(--shadow-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+
+	--color-canvas: oklch(18% 0 0);    /* Dark neutral */
+	--color-ink: oklch(95% 0 0);       /* Light text */
+  }
+}
