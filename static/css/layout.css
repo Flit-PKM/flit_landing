@@ -13,7 +13,7 @@
         display: flex;
         flex-direction: column;
         margin: auto;
-        padding: 1rem;
+        padding: 2rem;
     }
 
     .main-content {
@@ -26,6 +26,12 @@
         width: 100%;
         background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
         backdrop-filter: blur(4px);
+    }
+    
+    @media (max-width: 768px) {
+        .main-content {
+            flex-direction: column;
+        }
     }
     .main-content img {
         width: 200px;
@@ -48,11 +54,5 @@
         background: color-mix(in oklab, var(--color-canvas), var(--color-mid-grey) 10%);
         margin: auto;
         padding: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .main-content {
-            flex-direction: column;
-        }
     }
 }
