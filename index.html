@@ -78,6 +78,36 @@
             <p>Teamwork between your intuition and smart tech for better ideas, clearer memories, and those insightful "aha!" moments.</p>
             <br>
         </div>
+        <div class="main-content attention">
+            <div style="margin: auto;">
+                <h3>Sign up for early access to Flit Apps and News!</h3>
+                <form action="https://core.flit-pkm.com/subscribe" method="post" id="mailing-list-form">
+                    <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                    <button type="submit" id="submit-btn" disabled>Subscribe</button>
+                    <div
+                        class="cf-turnstile"
+                        data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
+                        data-theme="auto"
+                        data-size="compact"
+                        data-action="newsletter_signup"
+                        data-callback="onTurnstileSuccess"
+                        data-error-callback="onTurnstileError"
+                    ></div>
+                </form>
+            </div>
+            <script>
+                // Enable button only after successful token
+                function onTurnstileSuccess(token) {
+                    document.getElementById("submit-btn").disabled = false;
+                }
+            
+                // Optional: handle errors gracefully (e.g., retry)
+                function onTurnstileError(errorCode) {
+                    console.error("Turnstile error:", errorCode);
+                    // Keep button disabled or show user-friendly message
+                }
+            </script>
+        </div>
         <div class="main-content">
             <div><img src="static/images/flit_app_logo.svg" alt="Flit - App"></div>
             <div>

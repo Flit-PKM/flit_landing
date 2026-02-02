@@ -8,8 +8,9 @@
 	--color-canvas: color-mix(in oklab, oklch(98% 0 0) 100%, var(--color-blue) 15%);     /* Neutral background */
 	--color-ink: oklch(15% 0 0);        /* Primary text */
 	--color-link: color-mix(in oklab, var(--color-blue) 50%, var(--color-ink) 50%);
-	--color-negative: color-mix(in oklab, var(--color-red) 50%, var(--color-ink) 50%);
-	--color-positive: color-mix(in oklab, var(--color-green) 50%, var(--color-ink) 50%);
+	--color-neutral: color-mix(in oklab, var(--color-blue) 50%, var(--color-canvas) 50%);
+	--color-negative: color-mix(in oklab, var(--color-red) 50%, var(--color-canvas) 50%);
+	--color-positive: color-mix(in oklab, var(--color-green) 50%, var(--color-canvas) 50%);
 
 	--shadow-color: color-mix(in oklab, var(--color-ink) 15%, transparent);
 	--shadow-sm: 1px 1px 3px var(--shadow-color);
