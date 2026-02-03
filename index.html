@@ -47,6 +47,7 @@
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/_reset.css">
@@ -54,6 +55,9 @@
     <link rel="stylesheet" href="static/css/colors.css">
     <link rel="stylesheet" href="static/css/layout.css">
     <link rel="stylesheet" href="static/css/stars.css">
+
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     
 </head>
 <body class="twinkling-nodes-background">
@@ -92,6 +96,7 @@
                         data-action="newsletter_signup"
                         data-callback="onTurnstileSuccess"
                         data-error-callback="onTurnstileError"
+                        data-widget-id="newsletter-widget"
                     ></div>
                     <p id="subscription-error" class="form-error" hidden aria-live="polite"></p>
                 </form>
@@ -207,12 +212,19 @@
             });
 
             form.addEventListener("submit", function (e) {
+
+                console.log("[Form] Submit triggered");
+
                 e.preventDefault();
                 hideError();
                 var emailInput = form.querySelector('[name="email"]');
                 var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
                 var email = emailInput.value.trim();
                 var cfTurnstileResponse = turnstileInput ? turnstileInput.value : null;
+
+                console.log("[Form] Email:", email);
+                console.log("[Form] Turnstile token present:", !!cfTurnstileResponse);
+
                 if (!email) {
                     showError("Please enter your email.");
                     return;
@@ -224,23 +236,30 @@
                     body: JSON.stringify({ email: email, cf_turnstile_response: cfTurnstileResponse })
                 })
                     .then(function (res) {
+                        console.log("[Fetch] Response status:", res.status);
                         if (res.status === 201) {
                             showThankYou();
                             form.reset();
-                            if (typeof turnstile !== "undefined" && turnstile.reset) turnstile.reset();
+                            if (typeof turnstile !== "undefined" && turnstile.reset) {
+                                console.log("[Turnstile] Resetting widget");
+                                turnstile.reset();
+                            }
                             submitBtn.disabled = true;
                         } else {
                             return res.json().then(function (data) {
                                 var msg = (data.detail && data.detail[0] && data.detail[0].msg) ? data.detail[0].msg : "Something went wrong. Please try again.";
+                                console.warn("[Fetch] Server error:", msg);
                                 showError(msg);
                                 submitBtn.disabled = false;
                             }).catch(function () {
+                                console.warn("[Fetch] Failed to parse error JSON");
                                 showError("Something went wrong. Please try again.");
                                 submitBtn.disabled = false;
                             });
                         }
                     })
                     .catch(function () {
+                        console.error("[Fetch] Network/error:", err);
                         showError("Network error. Please try again later.");
                         submitBtn.disabled = false;
                     });
