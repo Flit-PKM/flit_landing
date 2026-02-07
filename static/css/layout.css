@@ -19,8 +19,8 @@
     .main-content {
         flex: auto;
         display: flex;
-        margin: 1rem auto;
-        padding: 1rem;
+        margin: 3rem auto;
+        padding: 2rem;
         border-radius: 1rem;
         box-shadow: var(--shadow-sm);
         width: 100%;
