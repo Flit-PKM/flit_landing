@@ -35,7 +35,7 @@
     <meta name="twitter:site" content="@flitkms">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="static/images/flit_core_logo.svg">
+    <link rel="icon" type="image/svg+xml" href="static/images/flit_app_logo.svg">
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/flit_core_logo_16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/flit_core_logo_32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/flit_core_logo_180.png">
@@ -63,18 +63,29 @@
 <body class="twinkling-nodes-background">
     <div class="layer1"></div>
     <div class="layer2"></div>
-    <div class="header">
-        <br>
-        <h1>Flit</h1>
-        <br>
-        <h3>Personal Knowledge Management</h3>
-        <br><br>
-        <p>Butterfly on the web of consiousness, Flutter</p>
+    <div class="top-bar">
+        <a class="top-bar-brand" href="https://core.flit-pkm.com/">
+            <img src="static/images/flit_app_logo.svg" alt="">
+            Flit
+        </a>
+        <span class="top-bar-actions">
+            <a href="https://core.flit-pkm.com/login">Log In</a>
+            <a href="https://core.flit-pkm.com/register">Sign Up</a>
+        </span>
     </div>
+    <div class="header">
+        <br><br>
+        <h1>Build your Second Brain</h1>
+        <h2>AI enhanced Knowledge Management built for living life</h2>
+    </div>
+    <br>
     <div class="main">
-        <div>
+        <div style="max-width: 700px;">
             <h2>Welcome to the Flit-PKM ecosystem</h2>
+            <br>
             <p>Flit is a comprehensive Personal Knowledge Management (PKM) and Wellness ecosystem providing private and secure knowledge management for individuals.</p>
+            <br>
+            <p>Butterfly on the web of consiousness, Flutter</p>
             <br>
             <h3>Vision</h3>
             <br>
@@ -86,8 +97,10 @@
             <div style="margin: auto;">
                 <h3>Sign up for early access to Flit Apps and News!</h3>
                 <form action="https://core.flit-pkm.com/subscribe" method="post" id="mailing-list-form">
-                    <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-                    <button type="submit" id="submit-btn" disabled>Subscribe</button>
+                    <div style="display: grid;">
+                        <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                        <button type="submit" id="submit-btn" disabled>Subscribe</button>
+                    </div>
                     <div
                         class="cf-turnstile"
                         data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
@@ -102,6 +115,29 @@
                 </form>
             </div>
         </div>
+        <a class="main-content" href="https://core.flit-pkm.com/">
+            <div><img src="static/images/flit_app_logo.svg" alt="Flit - Web"></div>
+            <div>
+                <h2>Flit - Web</h2>
+                <h3>Webapp for Flit - Core</h3>
+                <p>View your notes and insights as a knowledge graph in a web interface.</p>
+                <p>Refine your notes and insights with edit/delete functionality.</p>
+                <p>Manage relationships and categories of your notes and insights.</p>
+                <p>Export your notes and insights as a PDF, CSV, or JSON.</p>
+                <p>Import your notes and insights from a PDF, CSV, or JSON.</p>
+            </div>
+        </a>
+        <a class="main-content" href="https://github.com/Flit-PKM">
+                <div>
+                    <h2>Flit - Core</h2>
+                    <h3>Personal Knowledge Database</h3>
+                    <p>Private and Secure, all notes and insights are encrypted. Readable only to you.</p>
+                    <p>Sync between all your Devices and Apps</p>
+                    <p>Automate Relationship and Category Creation</p>
+                    <p>AI-Powered Insights and Idea Discovery</p>
+                </div>
+                <div><img src="static/images/flit_core_logo.svg" alt="Flit - Core"></div>
+        </a>
         <div class="main-content">
             <div><img src="static/images/flit_app_logo.svg" alt="Flit - App"></div>
             <div>
@@ -113,33 +149,6 @@
                 <p>Add categories to your notes, enabling better organization and search.</p>
             </div>
         </div>
-        <a href="https://github.com/Flit-PKM">
-            <div class="main-content">
-                <div><img src="static/images/flit_core_logo.svg" alt="Flit - Core"></div>
-                <div>
-                    <h2>Flit - Core</h2>
-                    <h3>Personal Knowledge Database</h3>
-                    <p>Private and Secure, all notes and insights are encrypted. Readable only to you.</p>
-                    <p>Sync between all your Devices and Apps</p>
-                    <p>Automate Relationship and Category Creation</p>
-                    <p>AI-Powered Insights and Idea Discovery</p>
-                </div>
-            </div>
-        </a>
-	<a href="https://core.flit-pkm.com/webapp/">
-            <div class="main-content">
-                <div><img src="static/images/flit_app_logo.svg" alt="Flit - Web"></div>
-                <div>
-                    <h2>Flit - Web</h2>
-                    <h3>Webapp for Flit - Core</h3>
-                    <p>View your notes and insights as a knowledge graph in a web interface.</p>
-                    <p>Refine your notes and insights with edit/delete functionality.</p>
-                    <p>Manage relationships and categories of your notes and insights.</p>
-                    <p>Export your notes and insights as a PDF, CSV, or JSON.</p>
-                    <p>Import your notes and insights from a PDF, CSV, or JSON.</p>
-                </div>
-            </div>
-	</a>
         <div class="main-content">
             <div>
                 <h2>Still</h2>

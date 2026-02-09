@@ -1,31 +1,87 @@
 @layer layout;
 @layer layout {
 
+    body {
+        padding-top: 3rem;
+    }
+
     .header {
+
         position: relative;
         text-align: center;
         margin: auto;
         padding: 1rem;
     }
+    .header h1 {
+        font-size: 5rem;
+        font-weight: 900;
+    }
+    .header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
+        backdrop-filter: blur(4px);
+        box-shadow: var(--shadow-sm);
+    }
+    .top-bar-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .top-bar-brand img {
+        height: 2rem;
+        width: auto;
+    }
+    .top-bar-actions {
+        display: flex;
+        gap: 1rem;
+    }
+    .top-bar-actions a {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--color-neutral);
+    }
+    .top-bar-actions a:hover{
+        background: color-mix(in oklab, var(--color-blue) 20%, var(--color-canvas));
+        box-shadow: var(--shadow-sm);
+    }
 
     .main {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: minmax(0, max-content);
+        max-width: max-content;
+        width: 100%;
+        align-content: center;
         margin: auto;
         padding: 2rem;
     }
 
     .main-content {
-        flex: auto;
+        width: 100%;
         display: flex;
-        margin: 3rem auto;
+        margin: 2rem auto;
         padding: 2rem;
         border-radius: 1rem;
         box-shadow: var(--shadow-sm);
-        width: 100%;
         background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
         backdrop-filter: blur(4px);
+    }
+    a.main-content:hover {
+        background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
+        box-shadow: var(--shadow-md);
     }
     
     @media (max-width: 768px) {
@@ -61,7 +117,9 @@
         padding: 1rem;
     }
     button{
+        align-self: center;
         padding: 0.5rem 1.5rem;
+        margin: auto;
         font-size: 1rem;
         background: var(--color-neutral);
         border-radius: 0.5rem;

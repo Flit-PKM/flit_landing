@@ -7,6 +7,8 @@
    viewBox="0 0 179.99998 180"
    version="1.1"
    id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="flit_core_logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +23,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     showguides="true">
+     showguides="true"
+     inkscape:zoom="1"
+     inkscape:cx="394.5"
+     inkscape:cy="360.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
     <sodipodi:guide
        position="-0.13229141,-0.13229031"
        orientation="0.70710678,-0.70710678"
@@ -76,7 +87,7 @@
        x="15.185493"
        y="63.920334"
        ry="0"
-       inkscape:export-filename="flit_core.png"
+       inkscape:export-filename="flit_core.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
@@ -92,7 +103,7 @@
          y="220.45634">Core</tspan></text>
     <g
        id="g4"
-       transform="matrix(-0.87521661,0,0,0.87521661,201.21892,27.199472)">
+       transform="matrix(-1.1134053,0,0,0.99915768,230.25911,18.735761)">
       <path
          style="fill:#246aaa;fill-opacity:1;stroke:none;stroke-width:2.64583;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          d="m 66.35189,172.45441 c 6.978508,-29.68492 41.31669,-40.16497 67.27332,-35.5849 -6.36824,31.1404 -39.458411,39.25949 -67.27332,35.5849 z"
@@ -113,11 +124,6 @@
          d="M 64.755654,171.77251 C 44.85711,141.8864 50.379665,90.951687 89.849789,70.110395 108.35006,110.31528 94.307159,147.06493 64.755654,171.77251 Z"
          id="path3"
          sodipodi:nodetypes="ccc" />
-      <path
-         style="fill:none;fill-opacity:1;stroke:#404040;stroke-width:3.96875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         d="m 35.058729,153.6506 c 14.345547,34.73662 39.726748,32.08648 115.536011,32.08648"
-         id="path4"
-         sodipodi:nodetypes="cc" />
     </g>
   </g>
 </svg>
