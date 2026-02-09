@@ -1,7 +1,7 @@
 @layer base;
 @layer base {
 	html {
-		background: linear-gradient(10deg, color-mix(in oklab, var(--color-theme) 30%, var(--color-canvas)), transparent, transparent), var(--color-canvas);
+		background: var(--background-gradient);
 		background-attachment: fixed;
 		color: var(--color-ink);
 		font-family: system-ui, sans-serif;

@@ -7,7 +7,7 @@
 
 	--color-canvas: color-mix(in oklab, oklch(98% 0 0) 100%, var(--color-blue) 15%);     /* Neutral background */
 	--color-ink: oklch(15% 0.001 0);        /* Primary text */
-	--color-theme: var(--color-green);
+	--background-gradient: linear-gradient(190deg, color-mix(in oklab, var(--color-blue) 30%, var(--color-canvas)), transparent, transparent), var(--color-canvas);
 	--color-link: color-mix(in oklab, var(--color-blue) 50%, var(--color-ink) 50%);
 	--color-neutral: color-mix(in oklab, var(--color-blue) 50%, var(--color-canvas) 50%);
 	--color-negative: color-mix(in oklab, var(--color-red) 50%, var(--color-canvas) 50%);
@@ -23,6 +23,6 @@
 
 	--color-canvas: color-mix(in oklab, oklch(18% 0 0) 100%, var(--color-blue) 10%);    /* Dark neutral */
 	--color-ink: oklch(90% 0.001 0);       /* Light text */
-	--color-theme: var(--color-blue);
+	--background-gradient: linear-gradient(10deg, color-mix(in oklab, var(--color-blue) 30%, var(--color-canvas)), transparent, transparent), var(--color-canvas);
   }
 }
