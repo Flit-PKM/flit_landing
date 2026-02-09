@@ -17,10 +17,13 @@
         font-weight: 900;
     }
     .header h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 700;
     }
-
+    .header p {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
     .top-bar {
         position: fixed;
         top: 0;
@@ -106,6 +109,10 @@
         border-color: var(--color-neutral);
         border-width: 2px;
         border-style: solid;
+    }
+    .main-content.attention h3 {
+        font-size: 2rem;
+        font-weight: 700;
     }
 
 
