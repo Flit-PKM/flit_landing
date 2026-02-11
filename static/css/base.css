@@ -18,5 +18,13 @@
 		margin: 1rem auto;
 		max-width: 40ch;
 	 }
+	 ul {
+		margin-left: 1rem;
+		list-style-type: disc;
+	 }
+	 ol {
+		margin-left: 1rem;
+		list-style-type: decimal;
+	 }
 
 }
