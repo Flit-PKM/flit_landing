@@ -1,12 +1,12 @@
 when:
-  branch: main
-  event: [push, tag, deployment]   # or just push
+  event: [push, tag, deployment]
+  branch: [main]               # only main branch — adjust if needed
 
 steps:
   deploy:
-    image: alpine:3.21               # small, git included in recent alpine
+    image: alpine:3.21
     volumes:
-      - /var/www/flit_landing:/target  # host:container — absolute host path required
+      - /var/www/flit_landing:/target
     commands:
       - apk add --no-cache git
       - cd /target
@@ -16,18 +16,13 @@ steps:
           git remote add origin https://github.com/Flit-PKM/flit_landing.git
         fi
       - git fetch --all --prune
-      - git checkout -f origin/main     # force update to latest main
-      - git clean -fdx                  # remove any leftovers/untracked
+      - git checkout -f origin/main
+      - git clean -fdx
       - echo "Deployed at $(date -u)"
 
-  notify-or-reload:                  # optional separate step
+  notify-or-reload:
     image: alpine:3.21
     commands:
       - echo "Reload nginx if needed"
-      - apk add curl
+      - apk add --no-cache curl
       - curl -X POST --unix-socket /run/nginx/nginx.sock http://localhost/reload || true
-
-      # Variant 2: nginx in docker (preferred)
-      # - apk add docker-cli   # or use docker socket mount below
-      # volumes: [ /var/run/docker.sock:/var/run/docker.sock ]
-      # - docker kill -s HUP nginx || true
