@@ -1,0 +1,13 @@
+# .woodpecker/hello.yaml   ← name can be anything, but .yaml / .yml is required
+
+when:
+  branch: main          # or whatever your default branch is
+
+steps:
+  hello:
+    image: alpine
+    commands:
+      - echo "Hello from Woodpecker 🐦"
+      - echo "This ran on $(date)"
+      - sleep 3
+      - echo "done ✓"
