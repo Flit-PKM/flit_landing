@@ -16,7 +16,7 @@ steps:
           git init
           git remote add origin https://github.com/Flit-PKM/flit_landing.git
         fi
-      - git fetch --all --prune
+      - git fetch --all --prune --force
       - git checkout -f origin/main
       - git clean -fdx
       - echo "Deployed at $(date -u)"
