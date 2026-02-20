@@ -1,13 +1,33 @@
-# .woodpecker/hello.yaml   ← name can be anything, but .yaml / .yml is required
-
 when:
-  branch: main          # or whatever your default branch is
+  branch: main
+  event: [push, tag, deployment]   # or just push
 
 steps:
-  hello:
-    image: alpine
+  deploy:
+    image: alpine:3.21               # small, git included in recent alpine
+    volumes:
+      - /var/www/flit_landing:/target  # host:container — absolute host path required
     commands:
-      - echo "Hello from Woodpecker 🐦"
-      - echo "This ran on $(date)"
-      - sleep 3
-      - echo "done ✓"
+      - apk add --no-cache git
+      - cd /target
+      - |
+        if [ ! -d .git ]; then
+          git init
+          git remote add origin https://github.com/Flit-PKM/flit_landing.git
+        fi
+      - git fetch --all --prune
+      - git checkout -f origin/main     # force update to latest main
+      - git clean -fdx                  # remove any leftovers/untracked
+      - echo "Deployed at $(date -u)"
+
+  notify-or-reload:                  # optional separate step
+    image: alpine:3.21
+    commands:
+      - echo "Reload nginx if needed"
+      - apk add curl
+      - curl -X POST --unix-socket /run/nginx/nginx.sock http://localhost/reload || true
+
+      # Variant 2: nginx in docker (preferred)
+      # - apk add docker-cli   # or use docker socket mount below
+      # volumes: [ /var/run/docker.sock:/var/run/docker.sock ]
+      # - docker kill -s HUP nginx || true
