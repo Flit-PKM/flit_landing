@@ -9,6 +9,7 @@ steps:
       - /var/www/flit_landing:/target
     commands:
       - apk add --no-cache git
+      - git config --global --add safe.directory /target
       - cd /target
       - |
         if [ ! -d .git ]; then
