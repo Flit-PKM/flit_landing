@@ -1,6 +1,6 @@
 when:
   event: [push, tag, deployment]
-  branch: [main]               # only main branch — adjust if needed
+  branch: [main]
 
 steps:
   deploy:
@@ -8,22 +8,16 @@ steps:
     volumes:
       - /var/www/flit_landing:/target
     commands:
-      - apk add --no-cache git
-      - git config --global --add safe.directory /target
-      - cd /target
-      - |
-        if [ ! -d .git ]; then
-          git init
-          git remote add origin https://github.com/Flit-PKM/flit_landing.git
-        fi
-      - git fetch --all --prune --force
-      - git checkout -f origin/main
-      - git clean -fdx
-      - echo "Deployed at $(date -u)"
+      - apk add --no-cache git rsync
+      - rm -rf /tmp/deploy
+      - git clone --depth 1 https://github.com/Flit-PKM/flit_landing.git /tmp/deploy
+      - rsync -av --delete /tmp/deploy/ /target/
+      - echo "✅ Deployed successfully at $(date -u)"
+      - echo "Commit: $(cd /tmp/deploy && git rev-parse --short HEAD)"
 
-  notify-or-reload:
+  reload-nginx:
     image: alpine:3.21
     commands:
-      - echo "Reload nginx if needed"
       - apk add --no-cache curl
+      - echo "Reloading nginx..."
       - curl -X POST --unix-socket /run/nginx/nginx.sock http://localhost/reload || true
