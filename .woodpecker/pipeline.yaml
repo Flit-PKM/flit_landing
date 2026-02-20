@@ -13,7 +13,7 @@ steps:
       - git clone --depth 1 https://github.com/Flit-PKM/flit_landing.git /tmp/deploy
       - rsync -av --delete /tmp/deploy/ /target/
       - echo "✅ Deployed successfully at $(date -u)"
-      - echo "Commit: $(cd /tmp/deploy && git rev-parse --short HEAD)"
+      - echo "Commit: $(cd /tmp/deploy && git rev-parse --short HEAD || echo unknown)"
 
   reload-nginx:
     image: alpine:3.21
