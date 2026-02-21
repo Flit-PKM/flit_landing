@@ -15,7 +15,7 @@ steps:
   reload-nginx:
     image: alpine:3.21
     privileged: true
-    pid: host
+    volumes:
+      - /home/ubuntu/woodpecker/nginx-reload:/home/ubuntu/woodpecker/nginx-reload
     commands:
-      - nsenter -t 1 -m -u -i -n -p /usr/bin/systemctl reload nginx
-      - echo "✅ Reload attempted at $(date -u)"
+      - nsenter -t 1 -m -u -i -n -- /home/ubuntu/woodpecker/nginx-reload
