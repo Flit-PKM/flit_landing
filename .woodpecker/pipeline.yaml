@@ -13,10 +13,11 @@ steps:
       - echo "Deployed at $(date -u)"
 
   reload-nginx:
-    image: alpine:3.21
-    privileged: true          # required for host access (Woodpecker allows this)
+    image: nginx:alpine
+    privileged: true
     volumes:
-      - /:/host:ro
+      - /run:/run:ro
+      - /var/run:/var/run:ro
     commands:
-      - chroot /host systemctl reload nginx || chroot /host nginx -s reload
-      - echo "✅ Nginx reloaded at $(date -u)"
+      - nginx -s reload || (echo "Reload failed - attempting full restart" && nginx -s stop && nginx)
+      - echo "Reload attempted at $(date -u)"
