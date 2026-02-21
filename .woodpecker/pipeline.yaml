@@ -18,5 +18,5 @@ steps:
     volumes:
       - /:/host:ro
     commands:
-      - chroot /host /bin/sh -c "nginx -s reload"
+      - chroot /host /usr/sbin -c "nginx -s reload"
       - echo "✅ Nginx reloaded at $(date -u)"
