@@ -17,5 +17,5 @@ steps:
     privileged: true
     pid: host
     commands:
-      - nsenter -t 1 -m -u -i -n /usr/bin -c "sudo systemctl reload nginx"
+      - nsenter -t 1 -m -u -i -n -p /usr/bin/systemctl reload nginx
       - echo "✅ Reload attempted at $(date -u)"
