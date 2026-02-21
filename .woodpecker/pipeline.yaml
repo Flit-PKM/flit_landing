@@ -16,6 +16,6 @@ steps:
     image: alpine:3.21
     privileged: true
     volumes:
-      - /home/ubuntu/woodpecker/nginx-reload:nginx-reload
+      - /home/ubuntu/woodpecker/nginx-reload:/home/ubuntu/woodpecker/nginx-reload
     commands:
-      - nsenter -t 1 -m -u -i -n -- nginx-reload
+      - nsenter -t 1 -m -u -i -n -- /home/ubuntu/woodpecker/nginx-reload
