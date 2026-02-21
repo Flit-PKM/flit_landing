@@ -13,7 +13,11 @@ steps:
       - echo "Deployed at $(date -u)"
 
   reload-nginx:
-    image: alpine:3.21
+    image: nginx:alpine   # tiny image that contains the exact `nginx -s reload` binary
+    pid_mode: host
+    volumes:
+      - /run:/run:ro
+      - /var/run:/var/run:ro
     commands:
-      - apk add --no-cache curl
-      - curl -X POST --unix-socket /run/nginx/nginx.sock http://localhost/reload || true
+      - nginx -s reload
+      - echo "✅ Nginx reloaded at $(date -u)"
