@@ -13,11 +13,9 @@ steps:
       - echo "Deployed at $(date -u)"
 
   reload-nginx:
-    image: nginx:alpine
+    image: alpine:3.21
     privileged: true
-    volumes:
-      - /run:/run:ro
-      - /var/run:/var/run:ro
     commands:
-      - nginx -s reload || (echo "Reload failed - attempting full restart" && nginx -s stop && nginx)
-      - echo "Reload attempted at $(date -u)"
+      - apk add --no-cache util-linux
+      - nsenter --target 1 --mount --pid -- sudo nginx -s reload
+      - echo "✅ Nginx reloaded at $(date -u)"
