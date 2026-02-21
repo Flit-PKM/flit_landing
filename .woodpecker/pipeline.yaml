@@ -5,15 +5,30 @@ when:
 steps:
   deploy:
     image: alpine:3.21
+    pid_mode: host          # ← critical: shares host PID namespace
     volumes:
       - /var/www/flit_landing:/target
+      - /run:/run:ro          # nginx.pid lives here on most systems
+      - /var/run:/var/run:ro  # fallback location
     commands:
       - apk add --no-cache rsync
-      - rsync -av --delete . /target/   # . = the already-cloned repo
+      - rsync -av --delete --exclude='.git*' . /target/
       - echo "Deployed at $(date -u)"
-
-  reload-nginx:
-    image: alpine:3.21
-    commands:
-      - apk add --no-cache curl
-      - curl -X POST --unix-socket /run/nginx/nginx.sock http://localhost/reload || true
+      - |
+        echo "=== Reloading Nginx ==="
+        for pidfile in /run/nginx.pid /var/run/nginx.pid; do
+          if [ -f "$pidfile" ]; then
+            PID=$(cat "$pidfile")
+            echo "Found nginx master PID: $PID"
+            if kill -HUP $PID; then
+              echo "✅ Nginx reloaded successfully at $(date -u)"
+              exit 0
+            else
+              echo "❌ Failed to send reload signal"
+              exit 1
+            fi
+          fi
+        done
+        echo "❌ nginx.pid not found in standard locations"
+        ps aux | grep [n]ginx || true
+        exit 1
