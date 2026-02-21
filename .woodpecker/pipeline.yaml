@@ -18,4 +18,4 @@ steps:
     volumes:
       - /run/nginx.pid:/run/nginx.pid
     commands:
-      - nsenter -t 1 -p -- kill -HUP $(cat /run/nginx.pid)
+      - nsenter -t 1 -m -p -u -i -n -- kill -HUP $(cat /run/nginx.pid)
