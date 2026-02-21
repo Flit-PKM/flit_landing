@@ -16,7 +16,7 @@ steps:
     image: alpine:3.21
     privileged: true
     volumes:
-      - /:/host:ro               # read-only host root
+      - /:/host
     commands:
-      - chroot /host nginx -s reload || chroot /host /usr/sbin/nginx -s reload
+      - chroot /host /bin/sh -c "systemctl reload nginx"
       - echo "✅ Reload attempted at $(date -u)"
