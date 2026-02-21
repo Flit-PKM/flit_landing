@@ -15,8 +15,7 @@ steps:
   reload-nginx:
     image: alpine:3.21
     privileged: true
-    volumes:
-      - /:/host
+    pid: host
     commands:
-      - chroot /host /bin/sh -c "systemctl reload nginx"
+      - nsenter -t 1 -m -u -i -n /bin/sh -c "systemctl reload nginx"
       - echo "✅ Reload attempted at $(date -u)"
