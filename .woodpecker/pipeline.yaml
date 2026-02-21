@@ -16,7 +16,6 @@ steps:
     image: alpine:3.21
     privileged: true
     volumes:
-      - /home/ubuntu/woodpecker/nginx-reload:/home/ubuntu/woodpecker/nginx-reload
+      - /run/nginx.pid:/run/nginx.pid
     commands:
-      - ls -la /home/ubuntu/woodpecker/nginx-reload
-      - nsenter -t 1 -u -i -n -- /home/ubuntu/woodpecker/nginx-reload
+      - kill -HUP $(cat /run/nginx.pid)
