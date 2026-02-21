@@ -13,11 +13,10 @@ steps:
       - echo "Deployed at $(date -u)"
 
   reload-nginx:
-    image: nginx:alpine   # tiny image that contains the exact `nginx -s reload` binary
-    pid_mode: host
+    image: alpine:3.21
+    privileged: true          # required for host access (Woodpecker allows this)
     volumes:
-      - /run:/run:ro
-      - /var/run:/var/run:ro
+      - /:/host:ro
     commands:
-      - nginx -s reload
+      - chroot /host systemctl reload nginx || chroot /host nginx -s reload
       - echo "✅ Nginx reloaded at $(date -u)"
