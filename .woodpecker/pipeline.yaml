@@ -18,4 +18,5 @@ steps:
     volumes:
       - /home/ubuntu/woodpecker/nginx-reload:/home/ubuntu/woodpecker/nginx-reload
     commands:
+      - ls -la /home/ubuntu/woodpecker/nginx-reload
       - nsenter -t 1 -u -i -n -- /home/ubuntu/woodpecker/nginx-reload
