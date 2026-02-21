@@ -15,7 +15,8 @@ steps:
   reload-nginx:
     image: alpine:3.21
     privileged: true
+    volumes:
+      - /:/host:ro
     commands:
-      - apk add --no-cache util-linux
-      - nsenter --target 1 --mount --pid -- /usr/sbin/nginx -s reload
+      - chroot /host /bin/sh -c "nginx -s reload"
       - echo "✅ Nginx reloaded at $(date -u)"
