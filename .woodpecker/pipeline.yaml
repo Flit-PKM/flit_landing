@@ -9,7 +9,7 @@ steps:
       - /var/www/flit_landing:/target
     commands:
       - apk add --no-cache rsync
-      - rsync -av --delete . /target/   # . = the already-cloned repo
+      - rsync -av --delete . /target/
       - echo "Deployed at $(date -u)"
 
   reload-nginx:
