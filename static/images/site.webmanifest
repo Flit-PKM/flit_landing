@@ -1,7 +1,7 @@
 {
     "name": "Flit - Personal Knowledge Management",
     "short_name": "Flit",
-    "description": "Flit is a comprehensive Personal Knowledge Management (PKM) ecosystem providing private and secure knowledge management for individuals.",
+    "description": "Flit is a comprehensive Note Taking and Personal Knowledge Management (PKM) ecosystem providing private and secure knowledge management for individuals.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
