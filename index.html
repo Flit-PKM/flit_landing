@@ -12,13 +12,15 @@
     <meta name="author" content="Flit">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
+    <meta name="theme-color" content="oklch(0.63 0.2 240)">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://flit-pkm.com/">
-    <meta property="og:title" content="Flit - Personal Knowledge Management">
+    <meta property="og:title" content="Flit - Note Taking & Personal Knowledge Management">
     <meta property="og:description" content="Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; Capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing.">
     <meta property="og:image" content="https://flit-pkm.com/static/images/twitter-card2.png">
+    <meta property="og:image:alt" content="Flit — note taking and personal knowledge management">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
     <meta property="og:site_name" content="Flit">
@@ -27,9 +29,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://flit-pkm.com/">
-    <meta name="twitter:title" content="Flit - Personal Knowledge Management">
+    <meta name="twitter:title" content="Flit - Note Taking & Personal Knowledge Management">
     <meta name="twitter:description" content="Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; Capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing.">
     <meta name="twitter:image" content="https://flit-pkm.com/static/images/twitter-card2.png">
+    <meta name="twitter:image:alt" content="Flit — note taking and personal knowledge management">
     <meta name="twitter:creator" content="@mrblindmouse">
     
     <!-- Favicon (PNG variants live on deploy; add under static/images/ if missing locally) -->
@@ -53,7 +56,16 @@
 
     <!-- Cloudflare Turnstile -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Flit",
+      "url": "https://flit-pkm.com/",
+      "description": "Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing."
+    }
+    </script>
 </head>
 <body class="twinkling-nodes-background">
     <div class="layer1"></div>

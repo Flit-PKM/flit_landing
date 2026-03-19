@@ -2,6 +2,7 @@
   "root": true,
   "extends": ["html-validate:document"],
   "rules": {
+    "input-missing-label": "off",
     "no-inline-style": "off",
     "void-style": "off",
     "element-permitted-content": "off",

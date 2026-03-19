@@ -5,7 +5,9 @@ Static marketing site for Flit PKM: single [`index.html`](index.html), styles un
 ## Deploy and CI
 
 - **[`.woodpecker/pipeline.yaml`](.woodpecker/pipeline.yaml)** runs **`validate`** (`html-validate` on `index.html`) then **`deploy`** (rsync to `/var/www/flit_landing`).
-- HTML rules live in **[`.htmlvalidate.json`](.htmlvalidate.json)** (SRI is off; local assets and Turnstile make full SRI optional).
+- HTML rules live in **[`.htmlvalidate.json`](.htmlvalidate.json)** (SRI is off; **`input-missing-label`** is off because newsletter email fields use placeholder-only UX without visible `<label>`).
+- **Titles**: use **`Flit - Note Taking & Personal Knowledge Management`** consistently in `<title>`, `meta name="title"`, `og:title`, and `twitter:title`.
+- **Theme color**: `<meta name="theme-color">` uses **`oklch(0.63 0.2 240)`**, matching **`--color-blue`** in [`static/css/colors.css`](static/css/colors.css). [`site.webmanifest`](static/images/site.webmanifest) **`theme_color`** is **`#0092f4`** (same color in sRGB hex for manifest consumers).
 
 ## Behavior worth preserving
 
