@@ -6,19 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Flit</title>
-    <meta name="title" content="Flit - Personal Knowledge Management">
-    <meta name="description" content="Flit - a Note Taking and Personal Knowledge Management (PKM) ecosystem; providing privacy, security and AI enhanced organization of your notes.">
+    <title>Flit - Note Taking & Personal Knowledge Management</title>
+    <meta name="title" content="Flit - Note Taking & Personal Knowledge Management">
+    <meta name="description" content="Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; Capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing.">
     <meta name="author" content="Flit">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://flit-pkm.com/">
     <meta property="og:title" content="Flit - Personal Knowledge Management">
-    <meta property="og:description" content="Flit - a Note Taking and Personal Knowledge Management (PKM) ecosystem; providing privacy, security and AI enhanced organization of your notes.">
+    <meta property="og:description" content="Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; Capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing.">
     <meta property="og:image" content="https://flit-pkm.com/static/images/twitter-card2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
@@ -29,15 +28,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://flit-pkm.com/">
     <meta name="twitter:title" content="Flit - Personal Knowledge Management">
-    <meta name="twitter:description" content="Flit - a Note Taking and Personal Knowledge Management (PKM) ecosystem; providing privacy, security and AI enhanced organization of your notes.">
+    <meta name="twitter:description" content="Flit is a Note Taking and Personal Knowledge Management (PKM) ecosystem; Capture notes, journals, and habits with AI-powered linking and encrypted storage. No tracking, no data sharing.">
     <meta name="twitter:image" content="https://flit-pkm.com/static/images/twitter-card2.png">
     <meta name="twitter:creator" content="@mrblindmouse">
     
-    <!-- Favicon -->
+    <!-- Favicon (PNG variants live on deploy; add under static/images/ if missing locally) -->
     <link rel="icon" type="image/svg+xml" href="static/images/flit_app_logo.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/images/flit_core_logo_16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/images/flit_core_logo_32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/images/flit_core_logo_180.png">
     <link rel="manifest" href="static/images/site.webmanifest">
     
     <!-- Canonical URL -->
@@ -64,7 +60,7 @@
     <div class="layer2"></div>
     <div class="top-bar">
         <a class="top-bar-brand" href="https://core.flit-pkm.com/">
-            <img src="static/images/flit_app_logo.svg" alt="">
+            <img src="static/images/flit_app_logo.svg" alt="Flit logo">
             Flit
         </a>
         <span class="top-bar-actions">
@@ -72,24 +68,21 @@
             <a href="https://core.flit-pkm.com/?redirect=register">Sign Up</a>
         </span>
     </div>
-    <div class="header">
-        <br><br>
+    <div class="hero">
         <h1>Build your Second Brain</h1>
-        <br>
-        <p>Record your idea, journals, or habits - and watch them link up and reveal patterns you never imagined!</p>
-        <br>
+        <p>Record your ideas, journals, or habits - and watch them link up and reveal patterns you never imagined!</p>
         <h2>Smart. Secure. Made for real life!</h2>
     </div>
-    <br>
-    <div class="main-content attention" style="margin: auto; max-width: 90%;">
+    <div class="main-content attention newsletter-cta" style="margin: auto; max-width: 90%;">
         <div style="margin: auto;">
             <h3>Stay Updated with our Newsletter</h3>
-            <form action="https://core.flit-pkm.com/subscribe" method="post" id="mailing-list-form">
-                <div style="display: grid;">
-                    <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-                    <button type="submit" id="submit-btn" disabled>Subscribe</button>
+            <form class="newsletter-form" id="newsletter-form-primary" action="https://core.flit-pkm.com/subscribe" method="post">
+                <div class="newsletter-form-fields">
+                    <input id="newsletter-email-primary" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                    <button type="submit" disabled>Subscribe</button>
                 </div>
                 <div
+                    id="newsletter-turnstile-host"
                     class="cf-turnstile"
                     data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
                     data-theme="auto"
@@ -97,35 +90,29 @@
                     data-action="newsletter_signup"
                     data-callback="onTurnstileSuccess"
                     data-error-callback="onTurnstileError"
-                    data-widget-id="newsletter-widget"
+                    data-widget-id="newsletter-turnstile"
                 ></div>
-                <p id="subscription-error" class="form-error" hidden aria-live="polite"></p>
+                <p class="form-error subscription-error" hidden aria-live="polite"></p>
             </form>
         </div>
     </div>
     <div class="main">
-        <div style="max-width: 700px;">
+        <div class="main-prose">
             <h2>Welcome to the Flit-PKM ecosystem</h2>
-            <br>
             <p>Flit is a comprehensive Personal Knowledge Management (PKM) and Wellness ecosystem providing private and secure knowledge management for individuals.</p>
-            <br>
             <h3>Vision</h3>
-            <br>
             <p>The Flit ecosystem is all about turning your everyday voice notes, meditations, and journal entries into a helpful "second brain" that grows with you. It listens to what you say, pulls out the key ideas, connects them in smart ways, and organizes everything from small details to big-picture insights. With free, easy-to-use apps on your phone, web, and for wellness, you can capture thoughts anytime and explore them naturally. The secure core uses AI to spot patterns, create connections, and help you refine it all.</p>
-            <br>
             <p>Teamwork between your intuition and smart tech for better ideas, clearer memories, and those insightful "aha!" moments.</p>
-            <br>
             <h3>Why Private?</h3>
             <p>Everything stays encrypted and just for you! No sharing, no tracking, no data collection.</p>
-            <br>
-            <p>Butterfly on the web of consiousness, Flutter</p>
-            <br>
+            <h3>Butterfly on the web of consciousness, Flutter</h3>
         </div>
         <div class="main-content">
-            <div><img src="static/images/flit_app_logo.svg" alt="Flit - Web"></div>
+            <div><img src="static/images/flit_app_logo.svg" alt="Flit web app logo"></div>
             <div>
                 <h2>Flit - Web</h2>
                 <h3>Build your second brain</h3>
+                <p>Main webapp for the Flit ecosystem</p>
                 <ul>
                     <li>Refine your notes and insights.</li>
                     <li>Explore the knowledge graph and discover hidden insights.</li>
@@ -147,19 +134,21 @@
                 <div>
                     <h2>Flit - Core</h2>
                     <h3>Personal Knowledge Database and AI Inference</h3>
+                    <p>Core backend and AI inference engine for the Flit ecosystem</p>
                     <ul>
                         <li>Keep all your thoughts safe and linked across devices.</li>
                         <li>Discover hidden Insights without effort.</li>
                         <li>Automate Relationship and Category Creation</li>
                     </ul>
                 </div>
-                <div><img src="static/images/flit_core_logo.svg" alt="Flit - Core"></div>
+                <div><img src="static/images/flit_core_logo.svg" alt="Flit Core logo"></div>
         </a>
         <div class="main-content">
-            <div><img src="static/images/flit_app_logo.svg" alt="Flit - App"></div>
+            <div><img src="static/images/flit_app_logo.svg" alt="Flit mobile app logo"></div>
             <div>
                 <h2>Flit - App</h2>
                 <h3>Record your ideas anytime, anywhere.</h3>
+                <p>Android App for the Flit ecosystem</p>
                 <ul>
                     <li>Get them written down, connected and easy to find.</li>
                     <li>Keep your personal thoughts secure and private. No ads, no tracking, no data collection.</li>
@@ -171,10 +160,11 @@
             <div>
                 <h2>Still</h2>
                 <h3>An Elegant Meditation Timer and Journal</h3>
+                <p>Meditation timer and journalling for the Flit ecosystem</p>
                 <ul>
                     <li>Track your meditation sessions, set goals and journal your thoughts.</li>
                     <li>Set daily Intentions to help you build better habits.</li>
-                    <li>100% Private, no adds, no tracking, no data collection</li>
+                    <li>100% Private, no ads, no tracking, no data collection</li>
                     <li>Optionally sync your journal entries with Flit - Core for deeper insights and analysis</li>
                 </ul>
             </div>
@@ -183,6 +173,7 @@
             <div>
                 <h2>Inkpot</h2>
                 <h3>AI enhanced writing webapp</h3>
+                <p>AI enhanced writing webapp for the Flit ecosystem</p>
                 <ul>
                     <li>Write, edit, and publish your ideas with ease.</li>
                     <li>Get AI-powered suggestions and feedback to improve your writing.</li>
@@ -197,25 +188,15 @@
                 <p>More features and apps to come soon...</p>
             </div>
         </div>
-        <div class="main-content attention">
+        <div class="main-content attention newsletter-cta">
             <div style="margin: auto;">
                 <h3>Stay in the know on Flit's latest updates and features</h3>
-                <form action="https://core.flit-pkm.com/subscribe" method="post" id="mailing-list-form">
-                    <div style="display: grid;">
-                        <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-                        <button type="submit" id="submit-btn" disabled>Subscribe</button>
+                <form class="newsletter-form" id="newsletter-form-secondary" action="https://core.flit-pkm.com/subscribe" method="post">
+                    <div class="newsletter-form-fields">
+                        <input id="newsletter-email-secondary" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                        <button type="submit" disabled>Subscribe</button>
                     </div>
-                    <div
-                        class="cf-turnstile"
-                        data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
-                        data-theme="auto"
-                        data-size="compact"
-                        data-action="newsletter_signup"
-                        data-callback="onTurnstileSuccess"
-                        data-error-callback="onTurnstileError"
-                        data-widget-id="newsletter-widget"
-                    ></div>
-                    <p id="subscription-error" class="form-error" hidden aria-live="polite"></p>
+                    <p class="form-error subscription-error" hidden aria-live="polite"></p>
                 </form>
             </div>
         </div>
@@ -224,108 +205,138 @@
 
     <div class="footer">
         <p>Flit-PKM and all related apps are brought to you by <a href="https://bmd-studios.com">BMD-Studios</a></p>
+        <p>"But seek first the kingdom of God and His righteousness, and all these things shall be added to you." - Matthew 6:33</p>
     </div>
 
     <div id="thank-you-popup" class="popup-overlay" hidden aria-modal="true" aria-labelledby="popup-title" role="dialog">
         <div class="popup-card">
             <h2 id="popup-title">Thank you</h2>
             <p>You're on the list.</p>
-            <button type="button" class="popup-close">OK</button>
+            <button type="button" id="popup-close-btn" class="popup-close">OK</button>
         </div>
     </div>
 
     <script>
-        // Enable button only after successful token
-        function onTurnstileSuccess(token) {
-            document.getElementById("submit-btn").disabled = false;
+        var TURNSTILE_WIDGET_ID = "newsletter-turnstile";
+
+        function eachNewsletterSubmitButton(callback) {
+            document.querySelectorAll('form.newsletter-form button[type="submit"]').forEach(callback);
+        }
+
+        function onTurnstileSuccess() {
+            eachNewsletterSubmitButton(function (btn) {
+                btn.disabled = false;
+            });
         }
 
         function onTurnstileError(errorCode) {
-            console.error("Turnstile error:", errorCode);
+            console.error("Turnstile error (newsletter):", errorCode);
+            eachNewsletterSubmitButton(function (btn) {
+                btn.disabled = true;
+            });
         }
 
         (function () {
-            var form = document.getElementById("mailing-list-form");
-            var submitBtn = document.getElementById("submit-btn");
-            var errorEl = document.getElementById("subscription-error");
             var popup = document.getElementById("thank-you-popup");
             var SUBSCRIPTIONS_URL = "https://core.flit-pkm.com/subscriptions/";
-
-            function showError(message) {
-                errorEl.textContent = message;
-                errorEl.removeAttribute("hidden");
-            }
-
-            function hideError() {
-                errorEl.textContent = "";
-                errorEl.setAttribute("hidden", "");
-            }
+            var lastFocusEl = null;
 
             function showThankYou() {
+                lastFocusEl = document.activeElement;
                 popup.removeAttribute("hidden");
+                var closeBtn = document.getElementById("popup-close-btn");
+                if (closeBtn) closeBtn.focus();
             }
 
             function hideThankYou() {
                 popup.setAttribute("hidden", "");
+                if (lastFocusEl && typeof lastFocusEl.focus === "function") {
+                    try {
+                        lastFocusEl.focus();
+                    } catch (ignore) {}
+                }
+                lastFocusEl = null;
             }
 
             popup.querySelector(".popup-close").addEventListener("click", hideThankYou);
             popup.addEventListener("click", function (e) {
                 if (e.target === popup) hideThankYou();
             });
-
-            form.addEventListener("submit", function (e) {
-
-                console.log("[Form] Submit triggered");
-
-                e.preventDefault();
-                hideError();
-                var emailInput = form.querySelector('[name="email"]');
-                var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
-                var email = emailInput.value.trim();
-                var cfTurnstileResponse = turnstileInput ? turnstileInput.value : null;
-
-                console.log("[Form] Email:", email);
-                console.log("[Form] Turnstile token present:", !!cfTurnstileResponse);
-
-                if (!email) {
-                    showError("Please enter your email.");
-                    return;
+            popup.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    e.preventDefault();
+                    hideThankYou();
                 }
-                submitBtn.disabled = true;
-                fetch(SUBSCRIPTIONS_URL, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email: email, cf_turnstile_response: cfTurnstileResponse })
-                })
-                    .then(function (res) {
-                        console.log("[Fetch] Response status:", res.status);
-                        if (res.status === 201) {
-                            showThankYou();
-                            form.reset();
-                            if (typeof turnstile !== "undefined" && turnstile.reset) {
-                                console.log("[Turnstile] Resetting widget");
-                                turnstile.reset();
-                            }
-                            submitBtn.disabled = true;
-                        } else {
-                            return res.json().then(function (data) {
-                                var msg = (data.detail && data.detail[0] && data.detail[0].msg) ? data.detail[0].msg : "Something went wrong. Please try again.";
-                                console.warn("[Fetch] Server error:", msg);
-                                showError(msg);
-                                submitBtn.disabled = false;
-                            }).catch(function () {
-                                console.warn("[Fetch] Failed to parse error JSON");
-                                showError("Something went wrong. Please try again.");
-                                submitBtn.disabled = false;
-                            });
-                        }
+            });
+
+            document.querySelectorAll("form.newsletter-form").forEach(function (form) {
+                var submitBtn = form.querySelector('button[type="submit"]');
+                var errorEl = form.querySelector(".subscription-error");
+
+                function showError(message) {
+                    errorEl.textContent = message;
+                    errorEl.removeAttribute("hidden");
+                }
+
+                function hideError() {
+                    errorEl.textContent = "";
+                    errorEl.setAttribute("hidden", "");
+                }
+
+                form.addEventListener("submit", function (e) {
+                    console.log("[Form] Submit triggered");
+
+                    e.preventDefault();
+                    hideError();
+                    var emailInput = form.querySelector('[name="email"]');
+                    var turnstileInput = document.querySelector('input[name="cf-turnstile-response"]');
+                    var email = emailInput.value.trim();
+                    var cfTurnstileResponse = turnstileInput ? turnstileInput.value : null;
+
+                    console.log("[Form] Email:", email);
+                    console.log("[Form] Turnstile token present:", !!cfTurnstileResponse);
+
+                    if (!email) {
+                        showError("Please enter your email.");
+                        return;
+                    }
+                    submitBtn.disabled = true;
+                    fetch(SUBSCRIPTIONS_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email: email, cf_turnstile_response: cfTurnstileResponse })
                     })
-                    .catch(function () {
-                        console.error("[Fetch] Network/error:", err);
-                        showError("Network error. Please try again later.");
-                        submitBtn.disabled = false;
-                    });
+                        .then(function (res) {
+                            console.log("[Fetch] Response status:", res.status);
+                            if (res.status === 201) {
+                                showThankYou();
+                                form.reset();
+                                if (typeof turnstile !== "undefined" && turnstile.reset) {
+                                    console.log("[Turnstile] Resetting widget:", TURNSTILE_WIDGET_ID);
+                                    turnstile.reset(TURNSTILE_WIDGET_ID);
+                                }
+                                eachNewsletterSubmitButton(function (btn) {
+                                    btn.disabled = true;
+                                });
+                            } else {
+                                return res.json().then(function (data) {
+                                    var msg = (data.detail && data.detail[0] && data.detail[0].msg) ? data.detail[0].msg : "Something went wrong. Please try again.";
+                                    console.warn("[Fetch] Server error:", msg);
+                                    showError(msg);
+                                    submitBtn.disabled = false;
+                                }).catch(function () {
+                                    console.warn("[Fetch] Failed to parse error JSON");
+                                    showError("Something went wrong. Please try again.");
+                                    submitBtn.disabled = false;
+                                });
+                            }
+                        })
+                        .catch(function (err) {
+                            console.error("[Fetch] Network/error:", err);
+                            showError("Network error. Please try again later.");
+                            submitBtn.disabled = false;
+                        });
+                });
             });
         })();
     </script>

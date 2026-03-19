@@ -3,6 +3,12 @@ when:
   branch: [main]
 
 steps:
+  validate:
+    image: node:22-alpine
+    commands:
+      - npm install -g html-validate@9
+      - html-validate index.html
+
   deploy:
     image: alpine:3.21
     volumes:
