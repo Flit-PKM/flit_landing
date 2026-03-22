@@ -216,4 +216,12 @@
     .popup-card .popup-close {
         margin-top: 1rem;
     }
+
+    .link-cards {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
