@@ -5,13 +5,18 @@
         padding-top: 3rem;
     }
 
+    .hero-container {
+        height: 70vh;
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
     .hero {
         position: relative;
         text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 30vh;
         padding: 1rem;
     }
     .hero h1 {
@@ -29,6 +34,28 @@
         font-weight: 700;
     }
     
+    @media (max-width: 768px) {
+        .hero {
+        margin-top: 20vh;
+        }
+        .hero-container {
+            height: 80vh;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
     .top-bar {
         position: fixed;
         top: 0;
@@ -52,6 +79,9 @@
         height: 2rem;
         width: auto;
     }
+    .top-bar-brand{
+        font-weight: 900;
+    }
     .top-bar-actions {
         display: flex;
         gap: 1rem;
@@ -62,7 +92,7 @@
         background: var(--color-neutral);
     }
     .top-bar-actions a:hover{
-        background: color-mix(in oklab, var(--color-blue) 20%, var(--color-canvas));
+        background: color-mix(in oklab, var(--color-neutral) 50%, var(--color-canvas));
         box-shadow: var(--shadow-sm);
     }
 
@@ -71,9 +101,6 @@
     }
     .main-prose > * + * {
         margin-top: 1rem;
-    }
-    .newsletter-cta {
-        margin-top: 2rem;
     }
     .newsletter-form-fields {
         display: grid;
@@ -99,7 +126,7 @@
         padding: 2rem;
     }
 
-    .main-content {
+    .card {
         width: 100%;
         display: flex;
         margin: 2rem auto;
@@ -109,48 +136,53 @@
         background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
         backdrop-filter: blur(4px);
     }
-    a.main-content:hover {
+    a.card:hover {
         background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
         box-shadow: var(--shadow-md);
     }
     
     @media (max-width: 768px) {
-        .main-content {
+        .card {
             flex-direction: column;
         }
     }
-    .main-content img {
+    .card img {
         width: 200px;
         height: 200px;
         object-fit: contain;
         margin: 0 auto;
         padding: 1rem;
     }
-    .main-content h2 {
+    .card h2 {
         text-align: center;
     }
-    .main-content h3 {
+    .card h3 {
         text-align: center;
     }
-    .main-content p {
+    .card p {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-    .main-content.attention {
+    .card.attention {
         border-color: var(--color-neutral);
         border-width: 2px;
         border-style: solid;
+        box-shadow: none;
     }
-    .main-content.attention h3 {
+    .card.attention h3 {
         font-size: 2rem;
         font-weight: 700;
+    }
+
+    .muted {
+        color: color-mix(in oklab, var(--color-mid-grey) 50%, var(--color-ink) 50%);
     }
 
 
     .footer {
         position: relative;
         text-align: center;
-        background: color-mix(in oklab, var(--color-canvas), var(--color-mid-grey) 10%);
+        background: color-mix(in oklab, transparent, var(--color-mid-grey) 10%);
         margin: auto;
         padding: 1rem;
     }
@@ -172,8 +204,10 @@
     button:hover{
         font-weight: bold;
         box-shadow: var(--shadow-md);
+        background: color-mix(in oklab, var(--color-neutral) 50%, var(--color-canvas));
     }
     button:disabled {
+        color: var(--color-mid-grey);
         background: color-mix(in oklab, var(--color-canvas) 50%, var(--color-mid-grey) 50%);
         box-shadow: none;
     }

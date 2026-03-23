@@ -80,32 +80,22 @@
             <a href="https://core.flit-pkm.com/?redirect=register">Sign Up</a>
         </span>
     </div>
-    <div class="hero">
-        <h1>Build your Second Brain</h1>
-        <p>Record your ideas, journals, or habits - and watch them link up and reveal patterns you never imagined!</p>
-        <h2>Smart. Secure. Made for real life!</h2>
+    <div class="hero-container">
+        <div class="hero">
+            <h1>Build your Second Brain</h1>
+            <p class="muted">Take Notes, Keep Journals, or Track Habits - and watch them link up and reveal patterns you never imagined!</p>
+            <h2>Smart. Secure. Made for real life!</h2>
+        </div>
     </div>
-    <div class="main-content attention newsletter-cta" style="margin: auto; max-width: 90%;">
+    <div class="card attention" style="margin: auto; max-width: 80%;">
         <div style="margin: auto;">
-            <h3>Stay Updated with our Newsletter</h3>
-            <form class="newsletter-form" id="newsletter-form-primary" action="https://core.flit-pkm.com/subscribe" method="post">
-                <div class="newsletter-form-fields">
-                    <input id="newsletter-email-primary" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-                    <button type="submit" disabled>Subscribe</button>
-                </div>
-                <div
-                    id="newsletter-turnstile-host"
-                    class="cf-turnstile"
-                    data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
-                    data-theme="auto"
-                    data-size="compact"
-                    data-action="newsletter_signup"
-                    data-callback="onTurnstileSuccess"
-                    data-error-callback="onTurnstileError"
-                    data-widget-id="newsletter-turnstile"
-                ></div>
-                <p class="form-error subscription-error" hidden aria-live="polite"></p>
-            </form>
+            <h3>Get started with Flit</h3>
+            <br>
+            <span class="top-bar-actions" style="justify-content: center;">
+                <a href="https://core.flit-pkm.com/?redirect=login">Log In</a>
+                <span style="margin: auto 1ch;"> or </span>
+                <a href="https://core.flit-pkm.com/?redirect=register">Sign Up</a>
+            </span>
         </div>
     </div>
     <div class="main">
@@ -113,17 +103,19 @@
             <h2>Welcome to the Flit-PKM ecosystem</h2>
             <p>Flit is a comprehensive Personal Knowledge Management (PKM) and Wellness ecosystem providing private and secure knowledge management for individuals.</p>
             <h3>Vision</h3>
-            <p>The Flit ecosystem is all about turning your everyday voice notes, meditations, and journal entries into a helpful "second brain" that grows with you. It listens to what you say, pulls out the key ideas, connects them in smart ways, and organizes everything from small details to big-picture insights. With free, easy-to-use apps on your phone, web, and for wellness, you can capture thoughts anytime and explore them naturally. The secure core uses AI to spot patterns, create connections, and help you refine it all.</p>
+            <p>The Flit ecosystem is all about turning your everyday voice notes, meditations, and journal entries into a helpful "second brain" that grows with you. It listens to what you say, pulls out the key ideas, connects them in smart ways, and organizes everything from small details to big-picture insights. With free, easy-to-use apps on your phone and desktop, you can capture thoughts anytime and explore them naturally. The secure core uses AI to spot patterns, create connections, and help you refine it all.</p>
             <p>Teamwork between your intuition and smart tech for better ideas, clearer memories, and those insightful "aha!" moments.</p>
             <h3>Why Private?</h3>
             <p>Everything stays encrypted and just for you! No sharing, no tracking, no data collection.</p>
-            <h3>Butterfly on the web of consciousness, Flutter</h3>
+            <br>
+            <h3 class="muted" style="text-align: center;">Butterfly on the web of consciousness, Flutter</h3>
+            <br>
         </div>
-        <div class="main-content">
+        <div class="card">
             <div><img src="static/images/flit_app_logo.svg" alt="Flit web app logo"></div>
             <div>
                 <h2>Flit - Web</h2>
-                <h3>Build your second brain</h3>
+                <h3 class="muted">Build your second brain</h3>
                 <p>Main webapp for the Flit ecosystem</p>
                 <ul>
                     <li>Refine your notes and insights.</li>
@@ -142,10 +134,10 @@
 
             </div>
         </div>
-        <a class="main-content" style="justify-content: flex-end;" href="https://github.com/Flit-PKM">
+        <a class="card" style="justify-content: flex-end;" href="https://github.com/Flit-PKM">
                 <div>
                     <h2>Flit - Core</h2>
-                    <h3>Personal Knowledge Database and AI Inference</h3>
+                    <h3 class="muted">Personal Knowledge Database and AI Inference</h3>
                     <p>Core backend and AI inference engine for the Flit ecosystem</p>
                     <ul>
                         <li>Keep all your thoughts safe and linked across devices.</li>
@@ -155,11 +147,11 @@
                 </div>
                 <div><img src="static/images/flit_core_logo.svg" alt="Flit Core logo"></div>
         </a>
-        <div class="main-content">
+        <div class="card">
             <div><img src="static/images/flit_app_logo.svg" alt="Flit mobile app logo"></div>
             <div>
                 <h2>Flit - App</h2>
-                <h3>Record your ideas anytime, anywhere.</h3>
+                <h3 class="muted">Record your ideas anytime, anywhere.</h3>
                 <p>Android App for the Flit ecosystem</p>
                 <ul>
                     <li>Get them written down, connected and easy to find.</li>
@@ -168,10 +160,10 @@
                 </ul>
             </div>
         </div>
-        <div class="main-content">
+        <div class="card">
             <div>
                 <h2>Still</h2>
-                <h3>An Elegant Meditation Timer and Journal</h3>
+                <h3 class="muted">An Elegant Meditation Timer and Journal</h3>
                 <p>Meditation timer and journalling for the Flit ecosystem</p>
                 <ul>
                     <li>Track your meditation sessions, set goals and journal your thoughts.</li>
@@ -181,10 +173,10 @@
                 </ul>
             </div>
         </div>
-        <div class="main-content">
+        <div class="card">
             <div>
                 <h2>Inkpot</h2>
-                <h3>AI enhanced writing webapp</h3>
+                <h3 class="muted">AI enhanced writing webapp</h3>
                 <p>AI enhanced writing webapp for the Flit ecosystem</p>
                 <ul>
                     <li>Write, edit, and publish your ideas with ease.</li>
@@ -194,13 +186,13 @@
             </div>
         </div>
 
-        <div class="main-content">
+        <div class="card">
             <div>
                 <h2>More to come...</h2>
                 <p>More features and apps to come soon...</p>
             </div>
         </div>
-        <div class="main-content attention newsletter-cta">
+        <div class="card attention newsletter-cta">
             <div style="margin: auto;">
                 <h3>Stay in the know on Flit's latest updates and features</h3>
                 <form class="newsletter-form" id="newsletter-form-secondary" action="https://core.flit-pkm.com/subscribe" method="post">
