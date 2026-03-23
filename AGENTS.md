@@ -11,7 +11,7 @@ Static marketing site for Flit PKM: single [`index.html`](index.html), styles un
 
 ## Behavior worth preserving
 
-- **Two newsletter forms** share the same backend and **`POST` target**; each keeps a **unique** form `id`. There is **one** Cloudflare Turnstile widget (`data-widget-id="newsletter-turnstile"`) in the **top** newsletter block. **`onTurnstileSuccess`** enables **both** Subscribe buttons; submits read `cf-turnstile-response` from the **document**; on **201**, **`turnstile.reset(TURNSTILE_WIDGET_ID)`** runs once and **both** buttons are disabled again.
+- **Newsletter signup** uses the same backend as before: form `id` **`newsletter-form-secondary`**, **`POST`** to the subscriptions API from script. There is **one** Cloudflare Turnstile widget (`data-widget-id="newsletter-turnstile"`) in the bottom newsletter block. **`onTurnstileSuccess`** enables the Subscribe button; submits read `cf-turnstile-response` from the **document**; on **201**, **`turnstile.reset(TURNSTILE_WIDGET_ID)`** runs and the Subscribe button is disabled again.
 - **Thank-you dialog**: Escape closes; focus returns to the element that had focus before open.
 
 ## Assets and paths

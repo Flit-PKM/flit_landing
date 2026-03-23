@@ -200,6 +200,17 @@
                         <input id="newsletter-email-secondary" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
                         <button type="submit" disabled>Subscribe</button>
                     </div>
+                    <div
+                        id="newsletter-turnstile-host"
+                        class="cf-turnstile"
+                        data-sitekey="0x4AAAAAACWncPZW1kU5S-fO"
+                        data-theme="auto"
+                        data-size="compact"
+                        data-action="newsletter_signup"
+                        data-callback="onTurnstileSuccess"
+                        data-error-callback="onTurnstileError"
+                        data-widget-id="newsletter-turnstile"
+                    ></div>
                     <p class="form-error subscription-error" hidden aria-live="polite"></p>
                 </form>
             </div>
