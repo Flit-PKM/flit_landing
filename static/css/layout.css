@@ -63,8 +63,8 @@
         right: 0;
         z-index: 10;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 0.75rem;
         padding: 0.5rem 1rem;
         background: color-mix(in oklab, var(--color-mid-grey) 7%, transparent);
         backdrop-filter: blur(4px);
@@ -82,9 +82,30 @@
     .top-bar-brand{
         font-weight: 900;
     }
+    .top-bar-nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.25rem 1rem;
+    }
+    .top-bar-nav a {
+        padding: 0.35rem 0.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: background 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    }
+    .top-bar-nav a:hover {
+        background: color-mix(in oklab, var(--color-mid-grey) 12%, transparent);
+    }
+    .top-bar-nav a[aria-current="page"] {
+        background: color-mix(in oklab, var(--color-neutral) 35%, transparent);
+        box-shadow: var(--shadow-sm);
+    }
     .top-bar-actions {
         display: flex;
         gap: 1rem;
+        flex-shrink: 0;
     }
     .top-bar-actions a {
         padding: 0.5rem 1rem;
@@ -96,6 +117,27 @@
         box-shadow: var(--shadow-sm);
     }
 
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 700px;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+    }
+    .page-header p {
+        font-size: 1.25rem;
+    }
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        .page-header p {
+            font-size: 1rem;
+        }
+    }
     .main-prose {
         max-width: 700px;
     }
@@ -185,6 +227,20 @@
         background: color-mix(in oklab, transparent, var(--color-mid-grey) 10%);
         margin: auto;
         padding: 1rem;
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .footer-nav a {
+        font-weight: 600;
+    }
+    .footer-nav a[aria-current="page"] {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
     }
 
     .footer p {

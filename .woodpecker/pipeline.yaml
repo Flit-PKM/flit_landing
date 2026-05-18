@@ -7,7 +7,7 @@ steps:
     image: node:22-alpine
     commands:
       - npm install -g html-validate@9
-      - html-validate index.html
+      - html-validate index.html about.html features.html apps.html
 
   deploy:
     image: alpine:3.21
@@ -15,5 +15,5 @@ steps:
       - /var/www/flit_landing:/target
     commands:
       - apk add --no-cache rsync
-      - rsync -av --delete . /target/
+      - rsync -av --delete --exclude=blog/ . /target/
       - echo "Deployed at $(date -u)"

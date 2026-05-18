@@ -61,10 +61,60 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Flit",
-      "url": "https://flit-pkm.com/",
-      "description": "Personal Note Taking and Knowledge Management"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://flit-pkm.com/#organization",
+          "name": "BMD-Studios",
+          "url": "https://bmd-studios.com/"
+        },
+        {
+          "@type": "Brand",
+          "@id": "https://flit-pkm.com/#brand",
+          "name": "Flit",
+          "logo": "https://flit-pkm.com/static/images/flit_app_logo.svg"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://flit-pkm.com/#website",
+          "url": "https://flit-pkm.com/",
+          "name": "Flit",
+          "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+          "publisher": { "@id": "https://flit-pkm.com/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://flit-pkm.com/#software-flit-web",
+          "name": "Flit",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Web",
+          "url": "https://core.flit-pkm.com/",
+          "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+          "image": "https://flit-pkm.com/static/images/twitter-card2.png",
+          "publisher": { "@id": "https://flit-pkm.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://flit-pkm.com/#software-flit-android",
+          "name": "Flit",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Android",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.bmdstudios.flit",
+          "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+          "image": "https://flit-pkm.com/static/images/twitter-card2.png",
+          "publisher": { "@id": "https://flit-pkm.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://flit-pkm.com/#webpage",
+          "url": "https://flit-pkm.com/",
+          "name": "Flit - Personal Note Taking & Knowledge Management",
+          "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+          "isPartOf": { "@id": "https://flit-pkm.com/#website" },
+          "about": { "@id": "https://flit-pkm.com/#software-flit-web" }
+        }
+      ]
     }
     </script>
 
@@ -74,10 +124,16 @@
     <div class="layer1"></div>
     <div class="layer2"></div>
     <div class="top-bar">
-        <a class="top-bar-brand" href="https://core.flit-pkm.com/">
+        <a class="top-bar-brand" href="index.html">
             <img src="static/images/flit_app_logo.svg" alt="Flit logo">
             Flit
         </a>
+        <nav class="top-bar-nav" aria-label="Primary">
+            <a href="apps.html">Apps</a>
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="/blog">Blog</a>
+        </nav>
         <span class="top-bar-actions">
             <a href="https://core.flit-pkm.com/?redirect=login">Log In</a>
             <a href="https://core.flit-pkm.com/?redirect=register">Sign Up</a>
@@ -106,20 +162,7 @@
             <h2>Flit - Personal Note Taking and Knowledge Management</h2>
             <p>Flit is a clean, focused Note Taking and Personal Knowledge MAnagement app; built to help you capute ideas quickly and keep them perfectly organised for the long term.</p>
             <p>Whether you're jotting down meeting notes, transcribing a voice memo, or slowly growing your personal knowledge base; Flit makes the entire process simple, fast and dependable.</p>
-            <h3>What you can do with Flit</h3>
-            <h4>- Take Notes and Transcribe Voice Recordings</h4>
-            <p class="muted">Write naturally or speak your thoughts, Flit instantly turns voice recordings into clean, structured notes.</p>
-            <h4>- Organise your Notes</h4>
-            <p class="muted">Sort notes into categories and build connections between them with bi-directional links. Every link shows you how your ideas relate and helps you navigate your knowledge with ease.</p>
-            <h4>- Full Import & Export</h4>
-            <p class="muted">Bring your existing notes from other apps or export everything whenever you want. Your data is never locked in.</p>
-            <h4>- Multi-Device Sync and Backup</h4>
-            <p class="muted">Your notes stay in perfect sync across web and your devices. Automatic backups give you total peace of mind.</p>
             <p>Flit is designed for people who want a straightforward, trustworthy tool that simply works. No clutter, no tracking, no data-sharing; just fast note-taking, smart organization, and reliable access everywhere.</p>
-            <p>Flit is continuously evolving with regular improvements. Created by <a href="https://bmd-studios.com">BMD-Studios</a> with a clear focus on practical, privacy-conscious tools for personal knowledge management.</p>
-            <br>
-            <h3 style="text-align: center;">Butterfly on the web of consciousness, Flutter</h3>
-            <br>
         </div>
         <div class="card">
             <div><img src="static/images/flit_app_logo.svg" alt="Flit web app logo"></div>
@@ -158,38 +201,6 @@
                 </ul>
             </div>
         </a>
-        <div class="card">
-            <div>
-                <h2>Still</h2>
-                <h3 class="muted">An Elegant Meditation Timer and Journal</h3>
-                <p>Meditation timer and journalling for the Flit ecosystem</p>
-                <ul>
-                    <li>Track your meditation sessions, set goals and journal your thoughts.</li>
-                    <li>Set daily Intentions to help you build better habits.</li>
-                    <li>100% Private, no ads, no tracking, no data collection</li>
-                    <li>Optionally sync your journal entries with Flit - Core for deeper insights and analysis</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <h2>Inkpot</h2>
-                <h3 class="muted">AI enhanced writing webapp</h3>
-                <p>AI enhanced writing webapp for the Flit ecosystem</p>
-                <ul>
-                    <li>Write, edit, and publish your ideas with ease.</li>
-                    <li>Get AI-powered suggestions and feedback to improve your writing.</li>
-                    <li>Pull sources from your Flit - Core database for better references and insights.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <h2>More to come...</h2>
-                <p>More features and apps to come soon...</p>
-            </div>
-        </div>
         <div class="card attention newsletter-cta">
             <div style="margin: auto;">
                 <h3>Stay in the know on Flit's latest updates and features</h3>
@@ -240,6 +251,12 @@
     </div>
 
     <div class="footer">
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="apps.html">Apps</a>
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="/blog">Blog</a>
+        </nav>
         <p>Flit-PKM and all related apps are brought to you by <a href="https://bmd-studios.com">BMD-Studios</a></p>
         <p>"But seek first the kingdom of God and His righteousness, and all these things shall be added to you." - Matthew 6:33</p>
     </div>
