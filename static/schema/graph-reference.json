@@ -72,7 +72,7 @@
         "@id": "https://flit-pkm.com/features.html#webpage",
         "url": "https://flit-pkm.com/features.html",
         "name": "Flit - Personal Note Taking & Knowledge Management | Features",
-        "description": "Take notes, transcribe voice recordings, organise with categories and bi-directional links, import and export freely, and sync across devices with Flit.",
+        "description": "Take notes, transcribe voice recordings, organize with categories and bi-directional links, import and export freely, and sync across devices with Flit.",
         "isPartOf": { "@id": "https://flit-pkm.com/#website" },
         "about": { "@id": "https://flit-pkm.com/#software-flit-web" }
       },
@@ -108,7 +108,7 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Organise your Notes",
+            "name": "Organize your Notes",
             "description": "Sort notes into categories and build connections between them with bi-directional links. Every link shows you how your ideas relate and helps you navigate your knowledge with ease."
           },
           {
