@@ -27,7 +27,7 @@
         "@id": "https://flit-pkm.com/#website",
         "url": "https://flit-pkm.com/",
         "name": "Flit",
-        "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+        "description": "Build your second brain with Flit—a clean, private PKM app. Capture ideas, explore your knowledge graph, sync securely, and import/export freely. No clutter, no tracking.",
         "publisher": { "@id": "https://flit-pkm.com/#organization" },
         "inLanguage": "en-US"
       },
@@ -38,7 +38,7 @@
         "applicationCategory": "ProductivityApplication",
         "operatingSystem": "Web",
         "url": "https://core.flit-pkm.com/",
-        "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+        "description": "Build your second brain with Flit—a clean, private PKM app. Capture ideas, explore your knowledge graph, sync securely, and import/export freely. No clutter, no tracking.",
         "image": "https://flit-pkm.com/static/images/twitter-card2.png",
         "publisher": { "@id": "https://flit-pkm.com/#organization" }
       },
@@ -49,7 +49,7 @@
         "applicationCategory": "ProductivityApplication",
         "operatingSystem": "Android",
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.bmdstudios.flit",
-        "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+        "description": "Build your second brain with Flit—a clean, private PKM app. Capture ideas, explore your knowledge graph, sync securely, and import/export freely. No clutter, no tracking.",
         "image": "https://flit-pkm.com/static/images/twitter-card2.png",
         "publisher": { "@id": "https://flit-pkm.com/#organization" }
       },
@@ -57,8 +57,8 @@
         "@type": "WebPage",
         "@id": "https://flit-pkm.com/#webpage",
         "url": "https://flit-pkm.com/",
-        "name": "Flit - Personal Note Taking & Knowledge Management",
-        "description": "Flit is a clean, private note-taking app for capturing ideas, transcribing voice recordings, organizing with categories and bi-directional links, and syncing across all your devices. Full import/export and automatic backups.",
+        "name": "Flit - Note Taking & Personal Knowledge Management",
+        "description": "Build your second brain with Flit—a clean, private PKM app. Capture ideas, explore your knowledge graph, sync securely, and import/export freely. No clutter, no tracking.",
         "isPartOf": { "@id": "https://flit-pkm.com/#website" },
         "about": { "@id": "https://flit-pkm.com/#software-flit-web" }
       }
@@ -71,8 +71,8 @@
         "@type": "WebPage",
         "@id": "https://flit-pkm.com/features.html#webpage",
         "url": "https://flit-pkm.com/features.html",
-        "name": "Flit - Personal Note Taking & Knowledge Management | Features",
-        "description": "Take notes, transcribe voice recordings, organize with categories and bi-directional links, import and export freely, and sync across devices with Flit.",
+        "name": "Flit - Note Taking & Personal Knowledge Management | Features",
+        "description": "Organize notes with categories, bi-directional links, and color coding. Transcribe voice locally on Android, sync with encrypted backup on Flit Core, import/export freely, and connect AI tools via MCP.",
         "isPartOf": { "@id": "https://flit-pkm.com/#website" },
         "about": { "@id": "https://flit-pkm.com/#software-flit-web" }
       },
@@ -102,26 +102,32 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Take Notes and Transcribe Voice Recordings",
-            "description": "Write naturally or speak your thoughts, Flit instantly turns voice recordings into clean, structured notes."
+            "name": "Personal Note Taking and Knowledge Management",
+            "description": "Flit is first and foremost a note taking app. Naturally, that requires the ability to manage your notes and build a knowledge base. This includes bi-directional relation mapping and the categorization of notes, 'pinned' status and color coding."
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Organize your Notes",
-            "description": "Sort notes into categories and build connections between them with bi-directional links. Every link shows you how your ideas relate and helps you navigate your knowledge with ease."
+            "name": "Voice Transcription",
+            "description": "The Android app features 100% local voice note transcription, with optional online transcription and formatting."
           },
           {
             "@type": "ListItem",
             "position": 3,
+            "name": "Multi-Device Sync and Secure Backup",
+            "description": "Flit - Core allows you to sync your notes across web and your devices. Automatic backups give you total peace of mind. The database your online notes are stored in, features 'at rest' and 'in transit' encryption."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
             "name": "Full Import & Export",
             "description": "Bring your existing notes from other apps or export everything whenever you want. Your data is never locked in."
           },
           {
             "@type": "ListItem",
-            "position": 4,
-            "name": "Multi-Device Sync and Backup",
-            "description": "Your notes stay in perfect sync across web and your devices. Automatic backups give you total peace of mind."
+            "position": 5,
+            "name": "MCP Server",
+            "description": "Flit - Core features a MCP server, allowing your AI tools to access your notes and manage your knowledge base."
           }
         ]
       }
@@ -134,8 +140,8 @@
         "@type": ["WebPage", "AboutPage"],
         "@id": "https://flit-pkm.com/about.html#webpage",
         "url": "https://flit-pkm.com/about.html",
-        "name": "Flit - Personal Note Taking & Knowledge Management | About",
-        "description": "Flit is built by BMD-Studios with a focus on practical, privacy-conscious personal knowledge management tools.",
+        "name": "Flit - Note Taking & Personal Knowledge Management | About",
+        "description": "Flit is a simple, private note-taking and PKM tool built for daily use—easy, secure, and improved continuously by its creator. No clutter, no complex systems.",
         "isPartOf": { "@id": "https://flit-pkm.com/#website" },
         "about": { "@id": "https://flit-pkm.com/#organization" }
       },
@@ -166,7 +172,7 @@
         "@type": "WebPage",
         "@id": "https://flit-pkm.com/apps.html#webpage",
         "url": "https://flit-pkm.com/apps.html",
-        "name": "Flit - Personal Note Taking & Knowledge Management | Apps",
+        "name": "Flit - Note Taking & Personal Knowledge Management | Apps",
         "description": "Explore the Flit ecosystem: Still meditation journal, Inkpot AI writing, and more apps for personal knowledge management.",
         "isPartOf": { "@id": "https://flit-pkm.com/#website" }
       },
@@ -202,6 +208,18 @@
             "@type": "ListItem",
             "position": 2,
             "item": { "@id": "https://flit-pkm.com/#software-flit-android" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Still",
+            "description": "An elegant meditation timer and journal for the Flit ecosystem. Track sessions, set goals, and optionally sync journal entries with Flit Core."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Inkpot",
+            "description": "AI-enhanced writing webapp for the Flit ecosystem. Write, edit, and publish with AI suggestions and sources from your Flit Core database."
           }
         ]
       }
